@@ -1,0 +1,146 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.topbar{
+	
+    background-color:blanchedalmond;
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+.navbar-default   {
+    background-color:blanchedalmond;
+
+}
+
+
+
+.imageMenuBar{
+    margin-top: 0;
+    padding-top: 0;
+    height: 50px;
+}
+
+.menuBarLinks{
+    margin: 0;
+    padding: 0;
+}
+
+.testBorder{
+    border: 1px solid black;
+}
+
+h1{
+    height: 30px;
+    display: inline-block;
+    padding-bottom: 55px;
+}
+
+.container{
+    margin: 15px 20px 20px 20px;
+}
+
+.character {
+    width :100px;
+    border: 1px solid black;
+    margin-left: 4px;
+}
+
+.displayInlineBlock{
+    display: inline-block;
+    resize: both;
+    word-wrap: break-word;
+
+}
+
+.characterRow{
+    border: 1px solid black;
+    display: block;
+}
+
+.someMargin{
+    margin-top: 10px;
+
+}
+
+.howItowrksimg{
+
+}
+
+
+
+.characterCreation{
+    padding: 5px;
+}
+
+.characterName{
+    color:#4da6ff;
+    cursor: pointer;
+    padding: 3px;
+}
+
+h4{
+    margin:0px;
+    padding:0px;
+}
+
+.selected{
+    background-color:grey;
+}
+
+.buttons{
+    margin-top: 10px;
+}
+
+.noSelection{
+    background-color: white;
+}
+
+.fieldText{
+    width :150px;
+    display: inline-block;
+}
+
+.characterLogoColor{
+    padding: 3px;
+    color: grey;
+}
+
+.inputField{
+    border: 1px solid silver;
+}
+
+#specialDisplay{
+    display: none;
+
+}
+
+@media screen and (max-width: 768px){
+.navbar-brand >div >strong{
+   display: none;
+}
+    
+    .imageMenuBar{
+        display: none;
+    }
+    #specialDisplay{
+
+        display:block;
+        font-size: 14px;
+
+
+    }
+    #specialDisplay > a{
+        text-decoration:none;
+        color:black;
+
+
+    }
+
+}
+
