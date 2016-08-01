@@ -1,0 +1,118 @@
+<template name="home">
+  {{>showingCharacters}}
+
+  {{>addCharacterForm}}
+
+
+
+</template>
+
+
+<template name="showingCharacters">
+  <div class="container"><!--Container for the characters-->
+
+    <h4>Characters in Campaign : {{charactersCount}}</h4>
+
+
+    <div class="characterRow">
+      {{#each character}}
+
+      <div class="someMargin  ">
+        <div class="characterLogoColor">Character</div>
+
+        <div class="characterName {{selectedClass}}">
+          {{> editableText context=singlePostDocument collection="characters" field="Name" }}
+        </div>
+
+      </div>
+
+
+      <div class="character displayInlineBlock">
+        <div class="displayInlineBlock">Class</div>
+        <div >
+          {{> editableText context=singlePostDocument collection="characters" field="Class"  }}
+        </div>
+      </div>
+
+      <div class="character displayInlineBlock">
+        <div>Race</div>
+        <div class="">
+          {{> editableText context=singlePostDocument collection="characters" field="Race" }}
+        </div>
+      </div>
+
+      <div class="character displayInlineBlock ">
+        <div>Level</div>
+        <div class="">
+          {{> editableText context=singlePostDocument collection="characters" field="Level" }}
+
+        </div>
+      </div>
+      <div class="character displayInlineBlock">
+        <div>Current XP</div>
+        <div class="">
+          {{CurrentXP}}
+
+        </div>
+      </div>
+      <div class="character displayInlineBlock">
+        <div>Next Level XP </div>
+        <div class="">
+          {{NeededXP}}
+
+        </div>
+      </div>
+      {{/each}}
+    </div><!--Character row end -->
+    {{#if showSelectedCharacter}}
+    <div>Selected Character : {{showSelectedCharacter.Name}}</div>
+
+
+    <div class="buttons">
+      <input class="give20XP" type="button" value="Give 20xp" >
+      <input class="give50XP" type="button" value="Give 50xp" >
+      <input class="Lose20XP" type="button" value="Lose 20xp" >
+      <input class="Lose50XP" type="button" value="Lose 50xp" >
+      <input class="remove" type="button" value="Remove Character">
+    </div>
+    {{/if}}
+  </div>
+
+</template><!--showingCharacters Template end-->
+
+
+<template name="addCharacterForm">
+
+  <div class="container testBorder characterCreation">
+  <h5>Character Creation</h5>
+
+    <form>
+      <div class="fieldText ">Name
+       <input class="inputField "  type="text" name="Name" required>
+      </div>
+
+      <div class="fieldText">Class
+        <input class="inputField" type="text" name="Class" required>
+      </div>
+
+      <div class="fieldText">Race
+        <input class="inputField"  type="text"   name="Race" required >
+      </div>
+
+      <div class="fieldText">Level
+        <input class="inputField"  type="number"  max="99"  name="Level">
+      </div>
+
+      <div class="fieldText">CurrentXP
+        <input class="inputField"  type="number"  name="CurrentXP" required>
+      </div>
+
+      <div class="fieldText">Next Level XP
+        <input class="inputField"  type="number" name="nextLevelXP" required>
+      </div>
+
+      <input type="submit" value="Add Character">
+  </form>
+
+  </div>
+</template>
